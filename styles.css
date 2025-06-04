@@ -1,0 +1,105 @@
+/* ************* index.html CSS ************ */
+
+
+header{
+    padding:1em;
+    background-color: var(--clr-accent-100);
+    width: 90%;
+    margin-top: var(--s0);
+    border: solid 2px var(--clr-primary-400);
+    box-shadow: 5px 5px 5px var(--clr-primary-400);
+}
+
+#page-container {
+  margin: auto;
+    position: relative;
+    min-height: 100vh;
+    max-width: 80%;
+  }
+  
+  main {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  footer {
+    margin-top:auto;
+    
+    height: 5rem;            /* Footer height */
+    background-color: var(--clr-accent-100);
+    padding-top: 1em;
+    margin-bottom: var(--s0);
+    border: solid 2px var(--clr-primary-400);
+  }
+
+  
+
+  .read-more-button:link, .read-more-button:visited {
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius:1em;
+    max-width: 10em;
+font-size: var(--S0)
+  }
+  
+  .read-more-button:hover, .read-more-button:active {
+    background-color: var(--clr-primary-400);
+  }
+/* *************** Post CSS *********************
+.post-wrapper{
+    max-width: 80%;
+    margin: auto;
+    margin-top: var(--s0);
+    
+}
+.post-title{
+    text-align:center;
+     background-color: var(--clr-accent-100);
+     border: solid 2px var(--clr-primary-400);
+     box-shadow: 5px 5px 5px var(--clr-primary-400); 
+}
+  .post-image{
+        display: block;
+        margin: auto;
+        padding: 2em;
+        border-radius: 20px;
+        border: solid 2px var(--clr-accent-100);
+
+  }
+
+.image-caption{
+    font-family: 'Roboto', sans-serif;
+	color: var(--clr-neutral-900);
+	font-size: var(--s1);
+    padding-top: 1em;
+} */
+
+.trip-list-section{
+  margin: auto;
+  padding:1em;
+    background-color: var(--clr-accent-100);
+    width: 100%;
+    margin-top: var(--s0);
+    border: solid 2px var(--clr-primary-400);
+    border-radius: var(--s1);
+    box-shadow: 5px 5px 5px var(--clr-primary-400);
+}
+
+.trip-title{
+  font-family: var(--ff-featured);
+	font-size: var(--s2);
+  color: var(--clr-primary-500);
+}
+
+li {
+  margin-bottom: 0.001rem;
+  margin-left: var(--s1);
+  list-style-type: square;
+  font-size: var(--s1);
+}
+
+li a{
+  font-size: var(--s1); 
+}

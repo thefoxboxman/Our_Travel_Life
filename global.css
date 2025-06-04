@@ -1,0 +1,236 @@
+/* Andy Bell Reset !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* https://piccalil.li/blog/a-modern-css */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+	height: 100%;
+}
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+}
+*,
+*::before,
+*::after {
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0.01ms !important;
+	scroll-behavior: auto !important;
+}
+/*     End Andy Bell's Reset !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+:root {
+	/* Modular Scale - Every Layout */
+	--ratio: 1.5;
+	--s0: 0.85rem;
+	--s-1: calc(var(--s0) / var(--ratio)); /* 10.7px */
+	--s-2: calc(var(--s-1) / var(--ratio)); /* 7.1px  */
+	--s-3: calc(var(--s-2) / var(--ratio)); /* 4.75px */
+	--s-4: calc(var(--s-3) / var(--ratio)); /* 3.2px */
+	--s-5: calc(var(--s-4) / var(--ratio)); /* 2.1px */
+	--s-6: calc(var(--s-5) / var(--ratio)); /* 1.4px */
+	--s-7: calc(var(--s-6) / var(--ratio)); /* 1px */
+	--s1: calc(var(--s0) * var(--ratio)); /* 24px  */
+	--s2: calc(var(--s1) * var(--ratio)); /* 36px */
+	--s3: calc(var(--s2) * var(--ratio)); /* 54px */
+	--s4: calc(var(--s3) * var(--ratio)); /* 81px  */
+	--s5: calc(var(--s4) * var(--ratio)); /* 121px */
+
+	/* Measure - prefered line lenghth   */
+	--measure: 190ch;
+} /*   End Root!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* Universal Selctor */
+* {
+	/* Colours */
+	--clr-accent-100: hsl(58, 52%, 87%); /* #D2D0A0 */
+	--clr-accent-200: hsl(96, 49%, 61%); /* #9EBC8A */
+
+	--clr-primary-400: hsl(108, 16%, 50%); /* #73946B */
+	--clr-primary-500: hsla(132, 21%, 32%, 0.789); /* #537D5D */
+
+	--clr-neutral-100: hsl(45,29%,97%); /* #FAF9F6 */
+	--clr-neutral-900: hsl(200,30%,8%); /* #0E161A */
+
+	/* Font Family */
+	/* featured font family  semi-bold(600) only */
+	font-family: 'Roboto', sans-serif;
+	--ff-featured: 'Roboto', sans-serif;
+}
+/* Fonts */
+
+/* Elements */
+
+h1 {
+	font-family: var(--ff-featured);
+	font-size: var(--s3);
+	font-weight:700;
+	color: var(--clr-primary-500);
+}
+
+h2 {
+	font-family: var(--ff-featured);
+	font-size: var(--s2);
+	color: var(--clr-primary-400);
+}
+h3 {
+	font-family: var(--ff-featured);
+	font-size: var(--s1);
+	color: var(--clr-accent-100);
+}
+h4 {
+	font-family: var(--ff-featured);
+	font-size: var(--s1);
+	color: var(--clr-neutral-900);
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	color: var(--clr-neutral-900);
+	font-size: var(--s1);
+	margin-bottom: var(--s1);
+	margin-top: var(--s1);
+	
+}
+/*Body !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+
+body {
+	/* body font family light(100), regular(400), bold(700) */
+	font-family: 'Roboto', sans-serif;
+	font-size: var(--s-3);
+	width: 90%;
+	margin: auto;
+	/* body layout */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-left: var(--s-2);
+	padding-right: var(--s-1);
+}
+/* Center !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.center-l {
+	box-sizing: content-box;
+	margin-inline: auto;
+	text-align: center;
+	/* max-inline-size: var(--measure); */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Box !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.box-l {
+	box-sizing: border-box;
+	padding: var(--s1);
+	border: var(--s-4) solid var(--clr-primary-500);
+	/* --color-light: #fff;
+	--color-dark: #000;
+	color: var(--color-dark);
+	background-color: var(--color-light); */
+}
+
+.box-l * {
+	color: inherit;
+}
+
+.box-l.invert {
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+.box-l.thin-padding {
+	padding: var(--s-1);
+}
+
+/* Stack !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.stack-l {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.stack-l > * {
+	margin-block: 0;
+}
+
+.stack-l > * + * {
+	margin-block-start: var(--space, 1.5rem);
+}
+
+/* Switcher !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.switcher-l {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s-1);
+}
+
+.switcher-l > * {
+	flex-grow: 1;
+	flex-basis: calc((50rem - 100%) * 999);
+}
+/* This stuffs up layout????
+.switcher > :nth-last-child(n+ 3),
+.switcher > :nth-last-child(n+ 3) ~ * {
+  flex-basis: 100%;
+} */
+
