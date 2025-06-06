@@ -88,6 +88,7 @@ font-size: var(--S0)
     box-shadow: 5px 5px 5px var(--clr-primary-400);
 }
 
+
 .trip-title{
   font-family: var(--ff-featured);
 	font-size: var(--s2);
@@ -99,8 +100,39 @@ li {
   margin-left: var(--s1);
   list-style-type: square;
   font-size: var(--s1);
+
 }
 
 li a{
   font-size: var(--s1); 
+}
+
+
+#odyssey-sa{
+  background-image: url(Images/Maitland_Old_Building_P1077268.DWPD0X13_1oe6UJ.webp);
+  background-size: cover;
+}
+
+#odyssey-sa li{
+  color: white;
+}
+
+#european-oddyssey-2008{
+  background-image: url(Images/Us-at-Parthenon.JPG);
+  background-size: cover;
+}
+
+#european-oddyssey-2008 li{
+  color: white;
+}
+
+
+#in-search{
+  background-image: url(Images/P5041473.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#in-search li{
+  color: white;
 }
